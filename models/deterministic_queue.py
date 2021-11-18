@@ -9,3 +9,4 @@ class DeterministicQueue():
         self.average_waiting_time = vals['average_waiting_time']
         self.initial_no_of_customers = vals['initial_no_of_customers']
         self.system_capacity = vals['system_capacity']
+        self.limit = vals['limit']
