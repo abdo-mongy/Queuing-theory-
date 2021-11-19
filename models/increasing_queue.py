@@ -37,30 +37,3 @@ class Increasing_queue(deterministic_queue.DeterministicQueue):
                     (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000):
                 ti = min(ti, i)
         return ti
-
-
-vals = {
-    'arrival_rate': 1 / 4
-    ,
-    'service_rate': 1 / 6
-    ,
-    's_s_time': 0
-    ,
-    'no_of_customers_in': 0
-    ,
-    'waiting_time': 0
-    ,
-    'average_waiting_time': 0
-    ,
-    'initial_no_of_customers': 1
-    ,
-    'system_capacity': 5
-    ,
-    'limit': 100
-}
-q = Increasing_queue(vals)
-a = q.compute_waiting_time()
-b = q.compute_no_of_customers_in()
-print(a)
-print(b)
-print(q.s_s_time)
