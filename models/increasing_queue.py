@@ -11,58 +11,56 @@ class Increasing_queue(deterministic_queue.DeterministicQueue):
         no_of_customers_in = []
         if self.initial_no_of_customers:
             for i in range(self.limit):
-                if i<self.s_s_time:
-                 no_of_customers_in.append(
-                    (i * self.arrival_rate) - (self.service_rate * i - self.service_rate / self.arrival_rate))
-                else :
-                    no_of_customers_in.append(self.system_capacity-1)
+                if i < self.s_s_time:
+                    no_of_customers_in.append(
+                        int(i * self.arrival_rate) - int(
+                            (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000))
+                else:
+                    no_of_customers_in.append(self.system_capacity - 1)
         else:
             no_of_customers_in = [1, 0]
         return no_of_customers_in
 
     def compute_waiting_time(self):
         wq = []
-        if self.initial_no_of_customers:
-            for i in range(self.limit):
-                if self.arrival_rate*self.s_s_time>i:
-                  wq.append(1 / self.service_rate - 1 / self.arrival_rate) * (i - 1)
-                else:
-                    wq.append( (1/self.service_rate -1/self.arrival_rate)*(self.arrival_rate*self.s_s_time-2))
-        else:
-            wq = [1, 0]
+        for i in range(1,self.limit):
+            if self.arrival_rate * self.s_s_time > i:
+                wq.append((1 / self.service_rate - 1 / self.arrival_rate) * (i - 1))
+            else:
+                wq.append((1 / self.service_rate - 1 / self.arrival_rate) * (self.arrival_rate * self.s_s_time - 2))
+        return wq
 
     def compute_s_s_time(self):
         ti = 500000
-        for i in range(45):
-            if self.system_capacity==int((int(i*self.arrival_rate)-( int(self.service_rate*i) - int(self.service_rate/self.arrival_rate)))):
-                ti=min(ti,i)
-            print(i)
-            print(" ")
-            print(int((i*self.arrival_rate)-(self.service_rate*i - self.service_rate/self.arrival_rate)))
-            print("\n")
+        for i in range(50):
+            if self.system_capacity == int(i * self.arrival_rate) - int(
+                    (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000):
+                ti = min(ti, i)
         return ti
 
-vals= {
-'arrival_rate':1/4
-    ,
-'service_rate':1/8
-    ,
-'s_s_time':0
-    ,
-'no_of_customers_in':0
-    ,
-'waiting_time':0
-    ,
-'average_waiting_time':0
-    ,
-'initial_no_of_customers':0
-    ,
-'system_capacity':5
-    ,
-'limit':100
-}
-q=Increasing_queue(vals)
-q.compute_waiting_time()
-q.compute_no_of_customers_in()
-print(q.s_s_time)
 
+vals = {
+    'arrival_rate': 1 / 4
+    ,
+    'service_rate': 1 / 6
+    ,
+    's_s_time': 0
+    ,
+    'no_of_customers_in': 0
+    ,
+    'waiting_time': 0
+    ,
+    'average_waiting_time': 0
+    ,
+    'initial_no_of_customers': 1
+    ,
+    'system_capacity': 5
+    ,
+    'limit': 100
+}
+q = Increasing_queue(vals)
+a = q.compute_waiting_time()
+b = q.compute_no_of_customers_in()
+print(a)
+print(b)
+print(q.s_s_time)
