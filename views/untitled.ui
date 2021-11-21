@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>608</width>
-    <height>562</height>
+    <height>573</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,7 +41,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab">
          <property name="sizePolicy">
@@ -88,7 +88,7 @@
             <item>
              <widget class="QPushButton" name="pushButton_7">
               <property name="text">
-               <string>cancel</string>
+               <string>Cancel</string>
               </property>
              </widget>
             </item>
@@ -188,13 +188,8 @@
           </item>
          </layout>
          <zorder>comboBox</zorder>
-         <zorder>horizontalLayoutWidget</zorder>
-         <zorder>verticalLayoutWidget_2</zorder>
          <zorder></zorder>
-         <zorder>horizontalLayoutWidget_3</zorder>
-         <zorder>horizontalLayoutWidget_2</zorder>
          <zorder></zorder>
-         <zorder>verticalLayoutWidget</zorder>
         </widget>
         <widget class="QWidget" name="tab_2">
          <attribute name="title">
@@ -313,7 +308,7 @@
             <item>
              <widget class="QPushButton" name="pushButton_49">
               <property name="text">
-               <string>cancel</string>
+               <string>Cancel</string>
               </property>
              </widget>
             </item>
@@ -347,12 +342,12 @@
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTab1">
     <property name="title">
-     <string>Tab1</string>
+     <string>File</string>
     </property>
    </widget>
    <addaction name="menuTab1"/>
