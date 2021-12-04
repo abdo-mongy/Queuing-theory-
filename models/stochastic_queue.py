@@ -1,4 +1,4 @@
-class StochasticQueue():
+class StochasticQueue:
 
     def __init__(self, vals):
         self.mean_arrival_rate = vals['mean_arrival_rate']

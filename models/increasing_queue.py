@@ -30,7 +30,6 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
         self.waiting_time = wq
 
     def compute_s_s_time(self):
-        ti = 500000
         for i in range(100000):
             if self.system_capacity == int(i * self.arrival_rate) - int(
                     (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000):
