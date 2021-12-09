@@ -58,27 +58,7 @@
            <widget class="QComboBox" name="comboBox">
             <item>
              <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
+              <string>D/D/1/K</string>
              </property>
             </item>
            </widget>
@@ -86,21 +66,21 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QPushButton" name="pushButton_7">
+             <widget class="QPushButton" name="cancel">
               <property name="text">
                <string>Cancel</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_52">
+             <widget class="QPushButton" name="compute">
               <property name="text">
                <string>Process</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_8">
+             <widget class="QPushButton" name="make_graph">
               <property name="text">
                <string>Graph</string>
               </property>
@@ -113,35 +93,35 @@
             <item row="4" column="0">
              <widget class="QLabel" name="label">
               <property name="text">
-               <string>TextLabel</string>
+               <string>limit </string>
               </property>
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="initial_no_of_customers">
               <property name="text">
-               <string>TextLabel</string>
+               <string>Initial number of customers</string>
               </property>
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="service_rate">
               <property name="text">
-               <string>TextLabel</string>
+               <string>Service rate</string>
               </property>
              </widget>
             </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="arrival_rate">
               <property name="text">
-               <string>TextLabel</string>
+               <string>Arrival rate</string>
               </property>
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="system_capacity">
               <property name="text">
-               <string>TextLabel</string>
+               <string>Capcity</string>
               </property>
              </widget>
             </item>
@@ -150,35 +130,35 @@
           <item row="1" column="1">
            <layout class="QGridLayout" name="gridLayout_2">
             <item row="1" column="0">
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="input_service_rate">
               <property name="placeholderText">
                <string>Enter second input</string>
               </property>
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="input_capcity">
               <property name="placeholderText">
                <string>Enter third input</string>
               </property>
              </widget>
             </item>
             <item row="4" column="0">
-             <widget class="QLineEdit" name="lineEdit_5">
+             <widget class="QLineEdit" name="input_limit">
               <property name="placeholderText">
                <string>Enter Fifth input</string>
               </property>
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QLineEdit" name="lineEdit_3">
+             <widget class="QLineEdit" name="input_intial_no_of_customers">
               <property name="placeholderText">
                <string>Enter fourth input</string>
               </property>
              </widget>
             </item>
             <item row="0" column="0">
-             <widget class="QLineEdit" name="lineEdit_4">
+             <widget class="QLineEdit" name="input_arrival_rate">
               <property name="placeholderText">
                <string>Enter first input</string>
               </property>
@@ -342,7 +322,7 @@
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTab1">
