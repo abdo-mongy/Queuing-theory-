@@ -14,7 +14,7 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
         if self.initial_no_of_customers:
             ti = self.s_s_time
             for t in range(self.limit):
-                if t >= ti :
+                if t >= ti:
                     nt.append(0)
                 else:
                     nt.append(self.initial_no_of_customers + int(self.arrival_rate * t) - int(self.service_rate * t))
@@ -28,14 +28,15 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
                 if n >= int(self.arrival_rate * ti):
                     wq.append(0)
                 else:
-                    wq.append((self.initial_no_of_customers - 1 + n) * (1 / self.service_rate) - n * (1 / self.arrival_rate))
+                    wq.append((self.initial_no_of_customers - 1 + n) * (1 / self.service_rate) - n *
+                              (1 / self.arrival_rate))
         else:
             wq = [0]
         self.waiting_time = wq
 
     def compute_average_waiting_time(self):
         if self.initial_no_of_customers:
-            self.average_waiting_time =  (self.initial_no_of_customers - 1) / (2 * self.service_rate)
+            self.average_waiting_time = (self.initial_no_of_customers - 1) / (2 * self.service_rate)
 
     def compute_s_s_time(self):
         for t in range(100000):
