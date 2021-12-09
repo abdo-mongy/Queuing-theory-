@@ -21,7 +21,7 @@
        <layout class="QHBoxLayout" name="horizontalLayout_3"/>
       </item>
       <item>
-       <widget class="QTabWidget" name="stochastic_queue_tab">
+       <widget class="QTabWidget" name="determenstic_queue">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>1</horstretch>
@@ -43,7 +43,7 @@
         <property name="currentIndex">
          <number>1</number>
         </property>
-        <widget class="QWidget" name="tab">
+        <widget class="QWidget" name="widget">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
            <horstretch>1</horstretch>
@@ -51,9 +51,12 @@
           </sizepolicy>
          </property>
          <attribute name="title">
-          <string>Tab 1</string>
+          <string>Determenstic Queue</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_3">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
           <item row="0" column="0">
            <widget class="QComboBox" name="comboBox">
             <item>
@@ -171,7 +174,7 @@
          <zorder></zorder>
          <zorder></zorder>
         </widget>
-        <widget class="QWidget" name="tab_2">
+        <widget class="QWidget" name="widget_2">
          <attribute name="title">
           <string>Stochastic Queue</string>
          </attribute>
