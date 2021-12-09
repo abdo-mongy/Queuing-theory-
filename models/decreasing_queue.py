@@ -1,5 +1,5 @@
 import deterministic_queue
-
+import matplotlib.pyplot as mat
 
 class DecreasingQueue(deterministic_queue.DeterministicQueue):
     def __init__(self, vals):
@@ -44,3 +44,15 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
                 break
             else:
                 self.s_s_time = 0
+
+    def graph(self):
+        x = self.no_of_customers_in
+        y = [i for i in range(self.limit)]
+        mat.plot(y, x)
+        mat.xlabel('x - axis')
+        mat.ylabel('y - axis')
+        mat.title('no of customers')
+        mat.show()
+
+        return
+
