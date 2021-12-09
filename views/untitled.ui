@@ -235,6 +235,24 @@
             </item>
            </layout>
           </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <item>
+             <widget class="QPushButton" name="cancel_sto">
+              <property name="text">
+               <string>Cancel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="compute_stochastic_queue">
+              <property name="text">
+               <string>Compute</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
           <item row="1" column="1">
            <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
@@ -251,7 +269,7 @@
               </property>
              </widget>
             </item>
-            <item alignment="Qt::AlignVCenter">
+            <item>
              <widget class="QLineEdit" name="system_capacity">
               <property name="placeholderText">
                <string>k</string>
@@ -262,24 +280,6 @@
              <widget class="QLineEdit" name="no_of_servers">
               <property name="placeholderText">
                <string>c</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_25">
-            <item>
-             <widget class="QPushButton" name="cancel_sto">
-              <property name="text">
-               <string>Cancel</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="compute_stochastic_queue">
-              <property name="text">
-               <string>Compute</string>
               </property>
              </widget>
             </item>
