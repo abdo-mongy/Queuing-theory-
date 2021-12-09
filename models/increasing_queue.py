@@ -1,6 +1,7 @@
 import deterministic_queue
 import matplotlib.pyplot as mat
 
+
 class IncreasingQueue(deterministic_queue.DeterministicQueue):
 
     def __init__(self, vals):
@@ -35,8 +36,9 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
                     (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000):
                 self.s_s_time = i
                 return
+
     def graph(self):
-        x=self.no_of_customers_in
+        x = self.no_of_customers_in
         y = [i for i in range (self.limit)]
         mat.plot(y, x)
         mat.xlabel('x - axis')

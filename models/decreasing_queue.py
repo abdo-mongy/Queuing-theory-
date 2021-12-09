@@ -1,6 +1,7 @@
 import deterministic_queue
 import matplotlib.pyplot as mat
 
+
 class DecreasingQueue(deterministic_queue.DeterministicQueue):
     def __init__(self, vals):
         super(DecreasingQueue, self).__init__(vals)
@@ -56,4 +57,3 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
         mat.show()
 
         return
-
