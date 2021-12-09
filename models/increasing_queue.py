@@ -39,7 +39,7 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
 
     def graph(self):
         x = self.no_of_customers_in
-        y = [i for i in range (self.limit)]
+        y = [i for i in range(self.limit)]
         mat.plot(y, x)
         mat.xlabel('x - axis')
         mat.ylabel('y - axis')
@@ -47,4 +47,3 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
         mat.show()
 
         return
-
