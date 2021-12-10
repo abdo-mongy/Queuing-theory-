@@ -174,23 +174,9 @@
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_3">
               <item>
-               <widget class="QLabel" name="labe">
-                <property name="text">
-                 <string>No of Customers in Q</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QLabel" name="label_16">
                 <property name="text">
                  <string>No of Customers </string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_15">
-                <property name="text">
-                 <string>Waiting Time in Q</string>
                 </property>
                </widget>
               </item>
@@ -206,21 +192,7 @@
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_5">
               <item>
-               <widget class="QLabel" name="no_of_customers_in_q">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QLabel" name="no_of_customers">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="waiting_time_in_q">
                 <property name="text">
                  <string>0</string>
                 </property>
@@ -435,7 +407,7 @@
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTab1">

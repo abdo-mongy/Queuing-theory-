@@ -1,20 +1,24 @@
-import deterministic_queue
+import increasing_queue
+from . import  deterministic_queue
+
 import matplotlib.pyplot as mat
 
 
 class DecreasingQueue(deterministic_queue.DeterministicQueue):
     def __init__(self, vals):
         super(DecreasingQueue, self).__init__(vals)
+
         self.compute_s_s_time()
         self.compute_waiting_time()
         self.compute_no_of_customers_in()
         self.compute_average_waiting_time()
 
+
     def compute_no_of_customers_in(self):
         nt = []
         if self.initial_no_of_customers:
             ti = self.s_s_time
-            for t in range(self.limit):
+            for t in range(self.limit+2):
                 if t >= ti:
                     nt.append(0)
                 else:
@@ -25,7 +29,7 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
         wq = []
         ti = self.s_s_time
         if self.initial_no_of_customers:
-            for n in range(self.limit):
+            for n in range(self.limit+2):
                 if n >= int(self.arrival_rate * ti):
                     wq.append(0)
                 else:
@@ -40,7 +44,7 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
             self.average_waiting_time = (self.initial_no_of_customers - 1) / (2 * self.service_rate)
 
     def compute_s_s_time(self):
-        for t in range(100000):
+        for t in range(self.limit+2):
             if (int(self.service_rate * t) - int(self.arrival_rate * t)) == self.initial_no_of_customers:
                 self.s_s_time = t
                 break
@@ -49,7 +53,7 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
 
     def graph(self):
         x = self.no_of_customers_in
-        y = [i for i in range(self.limit)]
+        y = [i for i in range(self.limit+2)]
         mat.plot(y, x)
         mat.xlabel('x - axis')
         mat.ylabel('y - axis')
@@ -57,3 +61,4 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
         mat.show()
 
         return
+
