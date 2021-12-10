@@ -41,7 +41,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="widget">
          <property name="sizePolicy">
@@ -65,31 +65,6 @@
              </property>
             </item>
            </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QPushButton" name="cancel">
-              <property name="text">
-               <string>Cancel</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="compute">
-              <property name="text">
-               <string>Process</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="make_graph">
-              <property name="text">
-               <string>Graph</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
           </item>
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout">
@@ -130,42 +105,135 @@
             </item>
            </layout>
           </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="cancel">
+              <property name="text">
+               <string>Cancel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="compute_deterministic">
+              <property name="text">
+               <string>Compute</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="make_graph">
+              <property name="text">
+               <string>Graph</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
           <item row="1" column="1">
            <layout class="QGridLayout" name="gridLayout_2">
             <item row="1" column="0">
              <widget class="QLineEdit" name="input_service_rate">
               <property name="placeholderText">
-               <string>Enter second input</string>
+               <string>u</string>
               </property>
              </widget>
             </item>
             <item row="2" column="0">
              <widget class="QLineEdit" name="input_capcity">
               <property name="placeholderText">
-               <string>Enter third input</string>
+               <string>k</string>
               </property>
              </widget>
             </item>
             <item row="4" column="0">
              <widget class="QLineEdit" name="input_limit">
               <property name="placeholderText">
-               <string>Enter Fifth input</string>
+               <string>t</string>
               </property>
              </widget>
             </item>
             <item row="3" column="0">
              <widget class="QLineEdit" name="input_intial_no_of_customers">
               <property name="placeholderText">
-               <string>Enter fourth input</string>
+               <string>M</string>
               </property>
              </widget>
             </item>
             <item row="0" column="0">
              <widget class="QLineEdit" name="input_arrival_rate">
               <property name="placeholderText">
-               <string>Enter first input</string>
+               <string>lambda</string>
               </property>
              </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="labe">
+                <property name="text">
+                 <string>No of Customers in Q</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>No of Customers </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>Waiting Time in Q</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Waiting Time</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="no_of_customers_in_q">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="no_of_customers">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="waiting_time_in_q">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="waiting_time">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -173,12 +241,99 @@
          <zorder>comboBox</zorder>
          <zorder></zorder>
          <zorder></zorder>
+         <zorder>horizontalLayoutWidget_2</zorder>
         </widget>
         <widget class="QWidget" name="widget_2">
          <attribute name="title">
           <string>Stochastic Queue</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_5">
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="av_no_of_customers_in_q">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="av_no_of_customers_in_system">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="av_waiting_time_in_q">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="av_waiting_time_in_system">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="cancel_sto">
+              <property name="text">
+               <string>Cancel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="compute_stochastic_queue">
+              <property name="text">
+               <string>Compute</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>No of Customers in Q</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>No of Customers in System</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Waiting Time in Q</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Waiting Time in System</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
           <item row="0" column="0">
            <widget class="QComboBox" name="comboBox_7">
             <item>
@@ -235,24 +390,6 @@
             </item>
            </layout>
           </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_25">
-            <item>
-             <widget class="QPushButton" name="cancel_sto">
-              <property name="text">
-               <string>Cancel</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="compute_stochastic_queue">
-              <property name="text">
-               <string>Compute</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
           <item row="1" column="1">
            <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
@@ -299,7 +436,7 @@
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTab1">
