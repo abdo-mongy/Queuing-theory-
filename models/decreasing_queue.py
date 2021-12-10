@@ -1,6 +1,4 @@
-import increasing_queue
-from . import  deterministic_queue
-
+from . import deterministic_queue
 import matplotlib.pyplot as mat
 
 
@@ -12,7 +10,6 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
         self.compute_waiting_time()
         self.compute_no_of_customers_in()
         self.compute_average_waiting_time()
-
 
     def compute_no_of_customers_in(self):
         nt = []
@@ -44,7 +41,7 @@ class DecreasingQueue(deterministic_queue.DeterministicQueue):
             self.average_waiting_time = (self.initial_no_of_customers - 1) / (2 * self.service_rate)
 
     def compute_s_s_time(self):
-        for t in range(self.limit+2):
+        for t in range(100000):
             if (int(self.service_rate * t) - int(self.arrival_rate * t)) == self.initial_no_of_customers:
                 self.s_s_time = t
                 break

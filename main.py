@@ -135,7 +135,7 @@ class MainApp(QMainWindow, ui):
                 'arrival_rate': arrival,
                 'service_rate': service,
                 'initial_no_of_customers': intial_no,
-                'system_capacity': system_capacity,
+                'system_capacity': system_capacity + 1,
                 'limit': lim
             }
             if arrival > service:

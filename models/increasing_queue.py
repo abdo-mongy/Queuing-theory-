@@ -1,4 +1,4 @@
-from models import  deterministic_queue
+from . import deterministic_queue
 import matplotlib.pyplot as mat
 
 
@@ -7,8 +7,8 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
     def __init__(self, vals):
         super(IncreasingQueue, self).__init__(vals)
         self.compute_s_s_time()
-        self.compute_waiting_time()
         self.compute_no_of_customers_in()
+        self.compute_waiting_time()
 
     def compute_no_of_customers_in(self):
         no_of_customers_in = []
@@ -31,7 +31,7 @@ class IncreasingQueue(deterministic_queue.DeterministicQueue):
         self.waiting_time = wq
 
     def compute_s_s_time(self):
-        for i in range(self.limit):
+        for i in range(100000):
             if self.system_capacity == int(i * self.arrival_rate) - int(
                     (self.service_rate * i - self.service_rate / self.arrival_rate) + 1 / 10000000000000):
                 self.s_s_time = i
