@@ -1,4 +1,4 @@
-import stochastic_queue
+from . import stochastic_queue
 import math
 
 

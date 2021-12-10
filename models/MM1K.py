@@ -1,4 +1,4 @@
-import stochastic_queue
+from . import stochastic_queue
 
 
 class MM1k(stochastic_queue.StochasticQueue):
@@ -7,16 +7,17 @@ class MM1k(stochastic_queue.StochasticQueue):
         super(MM1k, self).__init__(vals)
         self.traffic_intensity = (self.mean_arrival_rate / self.mean_service_rate)
         self.buffers = vals["buffer"]
-        self.p = vals["p"]
-        self.no_of_customers = vals["no_of_customrs"]
-        self.ex_no_of_customers_in_queu = vals["ex_no_of_customers_in_queu"]
-        self.ex_waiting_time = vals["ex_waiting_time"]
-        self.ex_waiting_time_in_queue = vals["ex_waiting_time_in_queue"]
+        self.p = None
+        self.no_of_customers = None
+        self.ex_no_of_customers_in_queu = None
+        self.ex_waiting_time = None
+        self.ex_waiting_time_in_queue = None
+        self.compute_p()
+
         self.compute_ex_no_of_customers()
         self.compute_ex_no_of_customers_in_queue()
         self.compute_ex_waiting_time()
         self.compute_ex_waiting_time_in_queue()
-        self.compute_p()
 
     def compute_ex_no_of_customers(self):
         if self.traffic_intensity == 1:

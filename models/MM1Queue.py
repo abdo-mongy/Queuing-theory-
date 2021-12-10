@@ -1,4 +1,4 @@
-import stochastic_queue
+from . import stochastic_queue
 
 
 class MM1Queue(stochastic_queue.StochasticQueue):
