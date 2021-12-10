@@ -57,15 +57,6 @@
           <property name="leftMargin">
            <number>10</number>
           </property>
-          <item row="0" column="0">
-           <widget class="QComboBox" name="comboBox">
-            <item>
-             <property name="text">
-              <string>D/D/1/K</string>
-             </property>
-            </item>
-           </widget>
-          </item>
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout">
             <item row="4" column="0">
@@ -105,6 +96,45 @@
             </item>
            </layout>
           </item>
+          <item row="1" column="1">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="input_service_rate">
+              <property name="placeholderText">
+               <string>Enter second input</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="input_capcity">
+              <property name="placeholderText">
+               <string>Enter third input</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLineEdit" name="input_limit">
+              <property name="placeholderText">
+               <string>Enter Fifth input</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="input_intial_no_of_customers">
+              <property name="placeholderText">
+               <string>Enter fourth input</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLineEdit" name="input_arrival_rate">
+              <property name="placeholderText">
+               <string>Enter first input</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
@@ -115,9 +145,9 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="compute_deterministic">
+             <widget class="QPushButton" name="compute">
               <property name="text">
-               <string>Compute</string>
+               <string>Process</string>
               </property>
              </widget>
             </item>
@@ -130,118 +160,23 @@
             </item>
            </layout>
           </item>
-          <item row="1" column="1">
-           <layout class="QGridLayout" name="gridLayout_2">
-            <item row="1" column="0">
-             <widget class="QLineEdit" name="input_service_rate">
-              <property name="placeholderText">
-               <string>u</string>
-              </property>
-             </widget>
+          <item row="0" column="0">
+           <widget class="QComboBox" name="comboBox">
+            <item>
+             <property name="text">
+              <string>D/D/1/K</string>
+             </property>
             </item>
-            <item row="2" column="0">
-             <widget class="QLineEdit" name="input_capcity">
-              <property name="placeholderText">
-               <string>k</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLineEdit" name="input_limit">
-              <property name="placeholderText">
-               <string>t</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLineEdit" name="input_intial_no_of_customers">
-              <property name="placeholderText">
-               <string>M</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <widget class="QLineEdit" name="input_arrival_rate">
-              <property name="placeholderText">
-               <string>lambda</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           </widget>
           </item>
           <item row="2" column="0">
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QLabel" name="labe">
-                <property name="text">
-                 <string>No of Customers in Q</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_16">
-                <property name="text">
-                 <string>No of Customers </string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_15">
-                <property name="text">
-                 <string>Waiting Time in Q</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_14">
-                <property name="text">
-                 <string>Waiting Time</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_5">
-              <item>
-               <widget class="QLabel" name="no_of_customers_in_q">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="no_of_customers">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="waiting_time_in_q">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="waiting_time">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
+           <layout class="QVBoxLayout" name="verticalLayout_2"/>
           </item>
          </layout>
          <zorder>comboBox</zorder>
          <zorder></zorder>
          <zorder></zorder>
-         <zorder>horizontalLayoutWidget_2</zorder>
+         <zorder>verticalLayoutWidget</zorder>
         </widget>
         <widget class="QWidget" name="widget_2">
          <attribute name="title">
@@ -250,38 +185,6 @@
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_25">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_4">
-              <item>
-               <widget class="QLabel" name="av_no_of_customers_in_q">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="av_no_of_customers_in_system">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="av_waiting_time_in_q">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="av_waiting_time_in_system">
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
             <item>
              <widget class="QPushButton" name="cancel_sto">
               <property name="text">
@@ -295,42 +198,6 @@
                <string>Compute</string>
               </property>
              </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="text">
-                 <string>No of Customers in Q</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_4">
-                <property name="text">
-                 <string>No of Customers in System</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>Waiting Time in Q</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_5">
-                <property name="text">
-                 <string>Waiting Time in System</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
             </item>
            </layout>
           </item>
@@ -436,7 +303,7 @@
      <x>0</x>
      <y>0</y>
      <width>608</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTab1">
