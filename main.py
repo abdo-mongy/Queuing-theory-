@@ -3,16 +3,15 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
 from models import MMckQueue, MM1Queue, MM1K, MMcQueue, increasing_queue, decreasing_queue, deterministic_queue
-from PyQt5.uic import loadUiType
 import urllib.request
 
 import os
 from os import path
+from views.views import Ui_MainWindow
 
-ui, _ = loadUiType('views/untitled.ui')
 
 
-class MainApp(QMainWindow, ui):
+class MainApp(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainApp, self).__init__(parent)
         QMainWindow.__init__(self)
