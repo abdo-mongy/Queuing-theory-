@@ -145,16 +145,22 @@ class MainApp(QMainWindow, Ui_MainWindow):
             pass
 
     def comput_determenstic(self):
-        model, vals = self.prepare_detrmanstic_vals()
-        if model == "decreasing_queue":
-            queue = decreasing_queue.DecreasingQueue(vals)
-            self.no_of_customers.setText(str(queue.no_of_customers_in))
-            self.waiting_time.setText(str(queue.waiting_time))
-        else:
-            queue = increasing_queue.IncreasingQueue(vals)
-            self.no_of_customers.setText(str(queue.no_of_customers_in))
-            self.waiting_time.setText(str(queue.waiting_time))
+        try:
+            model, vals = self.prepare_detrmanstic_vals()
+            try :
+                if model == "decreasing_queue":
+                    queue = decreasing_queue.DecreasingQueue(vals)
+                    self.no_of_customers.setText(str(queue.no_of_customers_in[queue.limit-2]))
+                    self.waiting_time.setText(str(queue.waiting_time[queue.limit-2]))
+                else:
+                    queue = increasing_queue.IncreasingQueue(vals)
+                    self.no_of_customers.setText(str(queue.no_of_customers_in[queue.limit-2]))
+                    self.waiting_time.setText(str(queue.waiting_time[queue.limit-2]))
+            except :
+                pass
 
+        except:
+            pass
     def graph(self):
         try:
             model, vals = self.prepare_detrmanstic_vals()
