@@ -47,7 +47,7 @@ Before running the application, make sure you have the following:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/queue-theory-simulation.git
+git clone https://github.com/abdo-mongy/Queuing-theory-
 cd queue-theory-simulation
 ```
 
