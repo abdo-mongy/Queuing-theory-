@@ -60,10 +60,10 @@ python main.py
 ### 3. Use the GUI
 1. Select the queue type: **Deterministic** or **Non-Deterministic**.
 2. Input the required parameters:
-   - Arrival rate (\u03bb).
-   - Service rate (\u03bc).
+   - Arrival rate .
+   - Service rate.
    - Number of servers (c) (for multi-server models).
-3. Click **Simulate** to view the results.
+3. Click **Graph** to view the results.
 
 ---
 
@@ -91,8 +91,8 @@ python main.py
 1. Launch the application.
 2. Choose **Non-Deterministic** from the queue type options.
 3. Input the following:
-   - **Arrival rate (\u03bb)**: 5 tasks/second.
-   - **Service rate (\u03bc)**: 7 tasks/second.
+   - **Arrival rate **: 5 tasks/second.
+   - **Service rate **: 7 tasks/second.
 4. Click **Simulate**.
 
 **Results**:
